@@ -1,0 +1,6 @@
+{
+  "name": "PromoPilot AI — Autonomous Retail Promotion Planner",
+  "description": "Autonomous Retail Promotion Planner that analyzes inventory, product margins, competitor prices, customer segments, holidays, and marketing budgets to generate, simulate, validate, compare, and optimize retail promotion strategies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_AI_API"]
+}
