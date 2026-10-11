@@ -2,10 +2,6 @@
 
 **ET AI Hackathon: Agentic Edition**
 
-[![Deployed on Render](https://img.shields.io/badge/Render-Deployed-success?style=flat-square&logo=render)](https://promopilot-agentic-promo-planner.onrender.com/)
-
----
-
 ## Overview
 
 PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-agent pipeline with deterministic constraint satisfaction to generate, simulate, and optimize promotion strategies. Unlike black-box LLM approaches, PromoPilot AI combines agentic intelligence with rigorous mathematical modeling to ensure business rule compliance.
@@ -18,15 +14,13 @@ PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-
 - React dashboard with approval workflow
 - Offline-capable deterministic fallback
 
----
-
 ## Architecture
 
 ### System Components
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    React Frontend                        │
+│                    React Frontend                       │
 │  (Dashboard, Planner, Simulation, Analytics, Settings)  │
 └──────────────────────┬──────────────────────────────────┘
                        │ REST API
@@ -37,15 +31,15 @@ PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-
                        │
 ┌──────────────────────▼──────────────────────────────────┐
 │          7-Agent Pipeline + Engine                      │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐   │
-│  │ Market   │ │Inventory │ │Customer  │ │Promotion │   │
-│  │ Analyst  │ │ Analyst  │ │ Strategy │ │ Strategy │   │
-│  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘   │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐    │
+│  │ Market   │ │Inventory │ │Customer  │ │Promotion │    │
+│  │ Analyst  │ │ Analyst  │ │ Strategy │ │ Strategy │    │
+│  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘    │
 │       │            │            │            │          │
-│  ┌────▼─────┐ ┌────▼─────┐ ┌────▼─────┐ ┌────▼─────┐   │
-│  │Simulation│ │Constraint│ │Optimize  │ │  LLM     │   │
-│  │  Agent   │ │  Guard   │ │  Agent   │ │(Optional)│   │
-│  └──────────┘ └──────────┘ └──────────┘ └──────────┘   │
+│  ┌────▼─────┐ ┌────▼─────┐ ┌────▼─────┐ ┌────▼─────┐    │
+│  │Simulation│ │Constraint│ │Optimize  │ │  LLM     │    │
+│  │  Agent   │ │  Guard   │ │  Agent   │ │(Optional)│    │
+│  └──────────┘ └──────────┘ └──────────┘ └──────────┘    │
 └──────────────────────┬──────────────────────────────────┘
                        │
 ┌──────────────────────▼──────────────────────────────────┐
@@ -74,8 +68,6 @@ PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-
 - SQLite3
 - Pydantic (data validation)
 - UnitTest (testing)
-
----
 
 ## 7-Agent Pipeline
 
@@ -117,8 +109,6 @@ PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-
      - Revenue Maximization
      - Inventory Clearance
    - Selects optimal strategy
-
----
 
 ## Installation & Setup
 
@@ -203,8 +193,6 @@ uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
 http://localhost:8000/docs
 ```
 
----
-
 ## Environment Variables
 
 Create a `.env` file in the project root:
@@ -223,8 +211,6 @@ PORT=3000
 # SQLite database path
 SQLITE_DB_PATH="./backend/promopilot.db"
 ```
-
----
 
 ## API Documentation
 
@@ -275,8 +261,6 @@ POST /api/settings/reset-demo           # Reset to seed data
 GET  /api/export/report                 # Export audit report
 ```
 
----
-
 ## Testing
 
 ### Run Unit Tests (Python Backend)
@@ -295,8 +279,6 @@ Tests verify:
 ```bash
 npm test
 ```
-
----
 
 ## Quick Demo Walkthrough
 
@@ -329,8 +311,6 @@ npm test
    - Click "Approve Promotion Plan"
    - Navigate to Analytics & History to track Estimated vs Actuals
 
----
-
 ## Deployment
 
 ### Render (Recommended)
@@ -361,8 +341,6 @@ railway init
 railway up
 ```
 
----
-
 ## Mathematical Models
 
 ### Constant-Elasticity Demand Curve
@@ -392,8 +370,6 @@ Campaign Spend = (Budget × 0.18) + (Units Sold × CAC_variable)
 Net Contribution = Gross Profit - Campaign Spend
 ```
 
----
-
 ## Project Structure
 
 ```
@@ -422,8 +398,6 @@ promopilot-agentic-promo-planner/
 └── LICENSE                 # MIT License
 ```
 
----
-
 ## Troubleshooting
 
 ### Build Fails with esbuild Error
@@ -450,19 +424,9 @@ If Featherless AI integration fails, the system automatically falls back to dete
 - API key has sufficient credits/permissions
 - Network connectivity to Featherless API
 
----
-
 ## License
 
 MIT License - See [LICENSE](LICENSE) file
-
----
-
-## Live Demo
-
-Deployed on Render: [https://promopilot-agentic-promo-planner.onrender.com/](https://promopilot-agentic-promo-planner.onrender.com/)
-
----
 
 ## Contributing
 
