@@ -2,8 +2,6 @@
 
 **ET AI Hackathon: Agentic Edition**
 
----
-
 ## Overview
 
 PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-agent pipeline with deterministic constraint satisfaction to generate, simulate, and optimize promotion strategies.
@@ -15,8 +13,6 @@ PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-
 - What-If simulation sandbox
 - React dashboard with approval workflow
 
----
-
 ## 7-Agent Pipeline
 
 1. **Market Analyst** - Price gaps vs competitors
@@ -26,8 +22,6 @@ PromoPilot AI is an autonomous retail promotion planning platform that uses a 7-
 5. **Simulation Agent** - Demand response & cannibalization
 6. **Constraint Guard** - Enforces margin ≥18%, price > cost, budget limits
 7. **Optimization Agent** - Ranks by Profit/Revenue/Clearance
-
----
 
 ## Setup
 
@@ -47,8 +41,6 @@ uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
 # Open http://localhost:8000/docs
 ```
 
----
-
 ## Testing
 
 ```cmd
@@ -57,8 +49,6 @@ python -m unittest backend/test_engine.py
 npm test
 ```
 
----
-
 ## Quick Demo
 
 1. Open Overview Dashboard - check Overstock Alerts (AeroSound Pro: 1,840 units)
@@ -66,8 +56,6 @@ npm test
 3. Inspect Agent Activity Center - see real trace with constraint violations
 4. Try What-If Simulation - move discount slider (28% = infeasible, margin < 18%)
 5. Approve plan and track Estimated vs Actuals
-
----
 
 ## License
 
